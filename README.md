@@ -51,14 +51,6 @@ The project will be successful if:[file:145]
 - The parking page provides a clear view of parking patterns and, where possible, simple comparisons to calls-for-service hotspots.  
 - Analyses are reproducible from documented code and transformations, and any narrative statements (including LLM-assisted ones) are validated against the underlying data.[file:145]
 
-## Repository Structure (planned)
-- `README.md` – project overview and usage  
-- `data/` – **not committed**; local raw and processed data (access via portal)  
-- `notebooks/` – Python/SQL EDA and exploration reports  
-- `powerbi/` – Power BI files (models and dashboards)  
-- `docs/` – proposal and future documentation (TECHNICAL, METHODOLOGY)  
-- `.gitignore` – excludes data files, temp files, and secrets (e.g., `.env`)[file:107][file:145]
-
 ## Getting Started (early plan)
 1. Acquire small samples of calls-for-service and parking datasets from the Syracuse Open Data Portal.  
 2. Run initial EDA in Python/SQL to profile structure, date coverage, and missing values.  
