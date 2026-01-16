@@ -6,14 +6,14 @@
 
 ## Project Overview
 
-This project analyzes Syracuse Police Department calls‑for‑service and parking violations (2023–present) to understand when and where police demand is highest and how parking enforcement patterns compare.[file:145] Processed, analysis‑ready tables feed into a Power BI dashboard for interactive exploration.[file:145]
+This project analyzes Syracuse Police Department calls‑for‑service and parking violations (2023–present) to understand when and where police demand is highest and how parking enforcement patterns compare. Processed, analysis‑ready tables feed into a Power BI dashboard for interactive exploration.
 
 ---
 
 ## Repository Structure
 
 - `notebooks/`  
-  - `phase2_exploration.ipynb` – Week 3–4 EDA and visualizations.[file:183]  
+  - `phase2_exploration.ipynb` – Week 3–4 EDA and visualizations.
   - `phase3_pipeline.ipynb` – Week 5–6 reproducible data pipeline.
 
 - `data_raw/`  
@@ -27,14 +27,14 @@ This project analyzes Syracuse Police Department calls‑for‑service and parki
   - PNG exports of key charts (calls by hour, calls by day of week, top incident types, parking tickets by month, etc.).
 
 - `documentation/`  
-  - Project proposal and Week‑6 architecture review.[file:186]
+  - Project proposal and Week‑6 architecture review.
 
 ---
 
 ## Data Sources
 
-- **Calls‑for‑Service (2023–2025)** – includes `DATEEND`, `TIMESTART`, `TIMEEND`, `ADDRESS`, `CODE_DEFINED`, `LarcenyCode`, `Arrest`, `LAT`, `LONG`.[file:145]  
-- **Parking Violations (2023–present)** – includes `ticket_number`, `issued_date`, `location`, `description`, `status`, `amount`, `LAT`, `LONG`.[file:145]  
+- **Calls‑for‑Service (2023–2025)** – includes `DATEEND`, `TIMESTART`, `TIMEEND`, `ADDRESS`, `CODE_DEFINED`, `LarcenyCode`, `Arrest`, `LAT`, `LONG`. 
+- **Parking Violations (2023–present)** – includes `ticket_number`, `issued_date`, `location`, `description`, `status`, `amount`, `LAT`, `LONG`.
 
 These raw CSVs are stored in `data_raw/` and serve as the single source of truth for the pipeline.
 
@@ -80,7 +80,7 @@ This will:
   
   Export key figures to figures/.
 
-You can still open notebooks/phase2_exploration.ipynb if you want to see the earlier EDA workflow and intermediate visualizations.[file:183]
+You can still open notebooks/phase2_exploration.ipynb if you want to see the earlier EDA workflow and intermediate visualizations.
 
 Using the Outputs:
 
@@ -92,10 +92,10 @@ Using the Outputs:
 
 ## Current Status (Weeks 3–6):
 
-Completed exploratory analysis and first‑round visualizations in phase2_exploration.ipynb using the raw CSVs.[file:183]
+Completed exploratory analysis and first‑round visualizations in phase2_exploration.ipynb using the raw CSVs.
 
 Implemented a reproducible raw → clean → processed pipeline with basic tests in phase3_pipeline.ipynb.
 
-Organized the repository into notebooks/, data_raw/, data_processed/, figures/, and documentation/ to match the Week‑6 architecture review.[file:186]
+Organized the repository into notebooks/, data_raw/, data_processed/, figures/, and documentation/ to match the Week‑6 architecture review.
 
-Next steps include connecting the processed CSVs to Power BI, designing dashboard pages for calls‑for‑service and parking, and exploring optional LLM‑based narrative summaries with validation against underlying measures.[file:186]
+Next steps include connecting the processed CSVs to Power BI, designing dashboard pages for calls‑for‑service and parking, and exploring optional LLM‑based narrative summaries with validation against underlying measures.
