@@ -66,29 +66,29 @@ These raw CSVs are stored in `data_raw/` and serve as the single source of truth
 
 This will:
 
-Load raw CSVs from data_raw/.
-
-Clean and combine crime and parking data.
-
-Drop records with impossible future dates (e.g., year 2210) and invalid ticket amounts.
-
-Create derived fields (year, hour, dow, month for crime; date, month for parking).
-
-Run a small set of QA tests (date ranges, missingness, basic sanity checks).
-
-Save cleaned datasets to data_processed/ as both Parquet and CSV.
-
-Export key figures to figures/.
+  Load raw CSVs from data_raw/.
+  
+  Clean and combine crime and parking data.
+  
+  Drop records with impossible future dates (e.g., year 2210) and invalid ticket amounts.
+  
+  Create derived fields (year, hour, dow, month for crime; date, month for parking).
+  
+  Run a small set of QA tests (date ranges, missingness, basic sanity checks).
+  
+  Save cleaned datasets to data_processed/ as both Parquet and CSV.
+  
+  Export key figures to figures/.
 
 You can still open notebooks/phase2_exploration.ipynb if you want to see the earlier EDA workflow and intermediate visualizations.[file:183]
 
 Using the Outputs:
 
-For Python analysis – use crime_clean.parquet and parking_clean.parquet in data_processed/ for faster, type‑safe loading.
-
-For Power BI / Excel – connect directly to crime_clean.csv and parking_clean.csv in data_processed/ as the analysis‑ready fact tables.
-
-For reports/slides – use PNGs in figures/ (calls by hour/day, top incident types, parking by month, etc.).
+  For Python analysis – use crime_clean.parquet and parking_clean.parquet in data_processed/ for faster, type‑safe loading.
+  
+  For Power BI / Excel – connect directly to crime_clean.csv and parking_clean.csv in data_processed/ as the analysis‑ready fact tables.
+  
+  For reports/slides – use PNGs in figures/ (calls by hour/day, top incident types, parking by month, etc.).
 
 ## Current Status (Weeks 3–6):
 
