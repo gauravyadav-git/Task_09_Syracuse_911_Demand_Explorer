@@ -47,3 +47,55 @@ These raw CSVs are stored in `data_raw/` and serve as the single source of truth
    ```bash
    git clone https://github.com/gauravyadav-git/Task_09_Syracuse_911_Demand_Explorer.git
    cd Task_09_Syracuse_911_Demand_Explorer
+
+2. **(Optional) Create and activate a virtual environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Windows: venv\Scripts\activate
+
+3. Install Dependencies
+
+   ```bash
+   pip install -r requirements.txt
+
+4. Run the pipeline notebook
+   Open Jupyter Lab/Notebook and execute:
+
+    notebooks/phase3_pipeline.ipynb from top to bottom.
+
+This will:
+
+Load raw CSVs from data_raw/.
+
+Clean and combine crime and parking data.
+
+Drop records with impossible future dates (e.g., year 2210) and invalid ticket amounts.
+
+Create derived fields (year, hour, dow, month for crime; date, month for parking).
+
+Run a small set of QA tests (date ranges, missingness, basic sanity checks).
+
+Save cleaned datasets to data_processed/ as both Parquet and CSV.
+
+Export key figures to figures/.
+
+You can still open notebooks/phase2_exploration.ipynb if you want to see the earlier EDA workflow and intermediate visualizations.[file:183]
+
+Using the Outputs:
+
+For Python analysis – use crime_clean.parquet and parking_clean.parquet in data_processed/ for faster, type‑safe loading.
+
+For Power BI / Excel – connect directly to crime_clean.csv and parking_clean.csv in data_processed/ as the analysis‑ready fact tables.
+
+For reports/slides – use PNGs in figures/ (calls by hour/day, top incident types, parking by month, etc.).
+
+## Current Status (Weeks 3–6):
+
+Completed exploratory analysis and first‑round visualizations in phase2_exploration.ipynb using the raw CSVs.[file:183]
+
+Implemented a reproducible raw → clean → processed pipeline with basic tests in phase3_pipeline.ipynb.
+
+Organized the repository into notebooks/, data_raw/, data_processed/, figures/, and documentation/ to match the Week‑6 architecture review.[file:186]
+
+Next steps include connecting the processed CSVs to Power BI, designing dashboard pages for calls‑for‑service and parking, and exploring optional LLM‑based narrative summaries with validation against underlying measures.[file:186]
