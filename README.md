@@ -90,7 +90,7 @@ Using the Outputs:
   
   For reports/slides – use PNGs in figures/ (calls by hour/day, top incident types, parking by month, etc.).
 
-## Current Status (Weeks 3–6):
+## (Weeks 3–6):
 
 Completed exploratory analysis and first‑round visualizations in phase2_exploration.ipynb using the raw CSVs.
 
@@ -99,3 +99,20 @@ Implemented a reproducible raw → clean → processed pipeline with basic tests
 Organized the repository into notebooks/, data_raw/, data_processed/, figures/, and documentation/ to match the Week‑6 architecture review.
 
 Next steps include connecting the processed CSVs to Power BI, designing dashboard pages for calls‑for‑service and parking, and exploring optional LLM‑based narrative summaries with validation against underlying measures.
+
+## Current Status (Through Week 10):
+
+**Weeks 7-8 Complete:** Connected crime_clean.csv to Power BI Desktop; built data model (types, relationships); created initial overview page with hourly bar chart (13K total calls, avg 17.09/day, peak 05:00) and KPIs.
+
+**Weeks 9-10 Complete:** Feature-complete crime dashboard:
+- Hour x dow heatmap (Matrix visual + conditional formatting)
+- Geospatial map (LAT/LONG bubbles sized by Total Calls measure=COUNTROWS, legend by DEFINED crime type)
+- Line chart (calls by hour segmented by dow)
+- Synced slicers (hour, month, dow); tooltips/trend lines
+
+.pbix file: `powerbi/Syracuse_911_Demand_Explorer.pbix` (embedded screenshots in repo).
+
+**Week 10 Milestone Achieved:** Interactive prototype ready for stakeholder review.
+
+Next steps (Weeks 11-13): Parking violations page; cross-dataset relationships; TECHNICAL.md/METHODOLOGY.md; presentation deck for Syracuse Open Data showcase.
+
